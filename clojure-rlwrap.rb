@@ -43,8 +43,8 @@ class ClojureRlwrap < Formula
     (prefix+'clojure-1.4.0.jar').chmod(0644) # otherwise it's 0600
     (prefix+'classes').mkpath
     (bin+'clj').write script
-    config = open('~/.inputrc', 'w')
-    config.write rlwrap_settings; config.close
+    #make more robust
+    `echo #{rlwrap_settings} ~/.inputrc`
     generate_completion
   end
   
