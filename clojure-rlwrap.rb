@@ -29,7 +29,7 @@ class ClojureRlwrap < Formula
     EOS
   end
   
-  def rlwrap_settings; <<- EOS
+  def rlwrap_settings; <<-EOS
     set editing-mode vi
     tab: complete
     set completion-ignore-case on
