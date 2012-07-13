@@ -28,6 +28,14 @@ class ClojureRlwrap < Formula
     fi
     EOS
   end
+  
+  def rlwrap_settings; <<- EOS
+    set editing-mode vi
+    tab: complete
+    set completion-ignore-case on
+    set blink-matching-paren on
+  EOS
+  end
 
   def install
     system "ant" if ARGV.build_head?
@@ -35,6 +43,7 @@ class ClojureRlwrap < Formula
     (prefix+'clojure-1.4.0.jar').chmod(0644) # otherwise it's 0600
     (prefix+'classes').mkpath
     (bin+'clj').write script
+    ('~/.inputrc').write rlwrap_settings
     generate_completion
   end
   
