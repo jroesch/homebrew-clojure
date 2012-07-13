@@ -44,7 +44,7 @@ class ClojureRlwrap < Formula
     (prefix+'classes').mkpath
     (bin+'clj').write script
     #make more robust
-    `echo #{rlwrap_settings} ~/.inputrc`
+    `echo "#{rlwrap_settings}" ~/.inputrc`
     generate_completion
   end
   
