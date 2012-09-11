@@ -1,16 +1,14 @@
-homebrew-clojurerl
+homebrew-clojure: Hombrew recipes for Clojure
 =======================
 
-A homebrew recipe that setups on rlwrap and tab completion in the base Clojure REPL.
-
-Just tap the repository in brew:  
+Just tap the repository:
 
 ```bash
-brew tap jroesch/homebrew-clojurerl 
+brew tap jroesch/homebrew-clojure
 ```  
 
-then just install:  
+then to install:  
 
 ```
-brew install clojure-rlwrap
+brew install <formula>
 ```
